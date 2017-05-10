@@ -41,26 +41,6 @@ post
 先查询，然后修改
 */
 func (c *MainController) Post() {
-	//	factory := c.GetString("factory")
-	//	if factory == "" {
-	//		c.Ctx.WriteString("factory is empty")
-	//		return
-	//	}
-	//	speed := c.GetString("speed")
-	//	if speed == "" {
-	//		c.Ctx.WriteString("speed is empty")
-	//		return
-	//	}
-	//	thick := c.GetString("thick")
-	//	if thick == "" {
-	//		c.Ctx.WriteString("thick is empty")
-	//		return
-	//	}
-
-	//	beego.Debug("MainController.Post, factory:", factory)
-	//	beego.Debug("MainController.Post, speed:", speed)
-	//	beego.Debug("MainController.Post, thick:", thick)
-
 	//获得requestbody
 	requestBody := c.Ctx.Input.RequestBody
 	beego.Debug("MainController", "requestBody:"+string(requestBody))

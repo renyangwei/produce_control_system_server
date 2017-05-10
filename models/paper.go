@@ -11,10 +11,7 @@ type Factory struct {
 	Id    int64  `orm:"pk;auto"`
 	Name  string `json:"Factory"` //厂名
 	Other string `json:"Other"`
-
-	//	Speed string //速度
-	//	Thick string //厚度
-
+	Group string `json:"Group"` //产线
 }
 
 func init() {
