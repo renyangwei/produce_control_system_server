@@ -1,7 +1,59 @@
-2017/05/08 23:11:30 [I] [asm_amd64.s:2086] http server Running on http://:8081
-2017/05/08 23:11:50 [D] [default.go:66] MainController requestBody:{"Factory":"c","Other":"排产=1345\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Group":"一号线"} 
-2017/05/08 23:11:50 [D] [default.go:80] MainController.Post, id: 4 
-2017/05/08 23:11:50 [D] [default.go:81] MainController.Post, created: false 
-2017/05/08 23:11:55 [D] [default.go:66] MainController requestBody:{"Factory":"c","Other":"排产=1345\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Group":"一号线"} 
-2017/05/08 23:11:55 [D] [default.go:80] MainController.Post, id: 4 
-2017/05/08 23:11:55 [D] [default.go:81] MainController.Post, created: false 
+2017/05/19 00:00:38 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/05/19 00:00:50 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/05/19 00:00:50 [D] [factoryController.go:67] MainController.Post, id: 6 
+2017/05/19 00:00:50 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:00:50 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/05/19 00:00:50 [D] [factoryController.go:67] MainController.Post, id: 7 
+2017/05/19 00:00:50 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:00:50 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
+2017/05/19 00:00:50 [D] [histroyController.go:65] HistoryController.Post, id =  3 
+2017/05/19 00:00:50 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:00:50 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
+2017/05/19 00:00:50 [D] [histroyController.go:65] HistoryController.Post, id =  5 
+2017/05/19 00:00:50 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:00:55 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/05/19 00:00:55 [D] [factoryController.go:67] MainController.Post, id: 6 
+2017/05/19 00:00:55 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:00:55 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/05/19 00:00:55 [D] [factoryController.go:67] MainController.Post, id: 7 
+2017/05/19 00:00:55 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:00:55 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
+2017/05/19 00:00:55 [D] [histroyController.go:65] HistoryController.Post, id =  3 
+2017/05/19 00:00:55 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:00:55 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
+2017/05/19 00:00:55 [D] [histroyController.go:65] HistoryController.Post, id =  5 
+2017/05/19 00:00:55 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:00:55 [D] [histroyController.go:23] HistoryController.Get: factory= 纸箱厂-1 date= 2017-5-18 class= A group= 一号线 
+2017/05/19 00:00:55 [D] [paper.go:77] ReadHistory: {0 纸箱厂-1  A 2017-5-18 一号线} 
+2017/05/19 00:00:55 [D] [histroyController.go:40] HistoryController.Get: {3 纸箱厂-1 开工时间=2017-05-18 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-05-18 00:00:00 一号线} 
+2017/05/19 00:01:00 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/05/19 00:01:00 [D] [factoryController.go:67] MainController.Post, id: 6 
+2017/05/19 00:01:00 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:01:00 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/05/19 00:01:00 [D] [factoryController.go:67] MainController.Post, id: 7 
+2017/05/19 00:01:00 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:01:00 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
+2017/05/19 00:01:00 [D] [histroyController.go:65] HistoryController.Post, id =  3 
+2017/05/19 00:01:00 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:01:00 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
+2017/05/19 00:01:00 [D] [histroyController.go:65] HistoryController.Post, id =  5 
+2017/05/19 00:01:00 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:01:05 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/05/19 00:01:05 [D] [factoryController.go:67] MainController.Post, id: 6 
+2017/05/19 00:01:05 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:01:05 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/05/19 00:01:05 [D] [factoryController.go:67] MainController.Post, id: 7 
+2017/05/19 00:01:05 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/05/19 00:01:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
+2017/05/19 00:01:05 [D] [histroyController.go:65] HistoryController.Post, id =  3 
+2017/05/19 00:01:05 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:01:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
+2017/05/19 00:01:05 [D] [histroyController.go:65] HistoryController.Post, id =  5 
+2017/05/19 00:01:05 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/05/19 00:07:49 [D] [factoryController.go:86] MainController.getGroups, factory: 纸箱厂-1 
+2017/05/19 00:07:49 [D] [factoryController.go:95] MainController.getGroups, factories [{6 纸箱厂-1 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {7 纸箱厂-1 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/05/19 00:07:49 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线, 
+2017/05/19 00:07:50 [D] [factoryController.go:21] mainController.get, factory: 纸箱厂-1 
+2017/05/19 00:07:50 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/05/19 00:07:50 [D] [factoryController.go:31] MainController.Get, before query factory: {0 纸箱厂-1  一号线} 
+2017/05/19 00:07:50 [D] [factoryController.go:38] MainController.Get, after query factory: {6 纸箱厂-1 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
