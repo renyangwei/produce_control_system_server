@@ -73,5 +73,81 @@ func (this *HistoryController) Post() {
 			return
 		}
 	}
+	//判断是否强制刷新
+	//根据厂名查询
+	var forceData models.ForceData
+	forceData.Name = history.Name
+	forceData.Refreshed = false
+	forceDatas, err := models.ReadForceData(forceData)
+	beego.Debug("HistoryController.Post, forceDatas is", forceDatas)
+	if len(forceDatas) > 0 {
+		this.Data["json"] = &forceDatas[0]
+		this.ServeJSON()
+		//还要修改是否刷新过
+		forceDatas[0].Refreshed = true
+		err = models.UpdateForceData(forceDatas[0])
+		if err != nil {
+			beego.Error("HistoryController.Post", "update forceData:"+err.Error())
+			this.Ctx.WriteString(err.Error())
+			return
+		}
+		return
+	}
 	this.Ctx.WriteString("post success")
+}
+
+/*
+获得历史数据中的产线
+*/
+func (this *HistoryController) GetGroups() {
+	name := this.Ctx.Input.Param(":factory")
+	beego.Debug("HistoryController.GetGroups", name)
+	var history models.History
+	history.Name = name
+	//查询产线
+	his, err := models.ReadHistoryGorup(history)
+	if err != nil {
+		beego.Error("HistoryController.GetGroups, readHistoryGorup failed", err.Error())
+		return
+	}
+	beego.Debug("HistoryController.GetGroups, his:", his)
+	this.Data["json"] = &his
+	this.ServeJSON()
+}
+
+/*
+获得历史数据中的班组
+*/
+func (this *HistoryController) GetClass() {
+	name := this.Ctx.Input.Param(":factory")
+	beego.Debug("HistoryController.GetClass", name)
+	var history models.History
+	history.Name = name
+	//查询产线
+	his, err := models.ReadHistoryClass(history)
+	if err != nil {
+		beego.Error("HistoryController.GetClass, readHistoryGorup failed", err.Error())
+		return
+	}
+	beego.Debug("HistoryController.GetGroups, his:", his)
+	this.Data["json"] = &his
+	this.ServeJSON()
+}
+
+/*
+根据厂名查询最近的一次历史数据的日期、班组和生产线
+*/
+func (this *HistoryController) GetLast() {
+	name := this.Ctx.Input.Param(":factory")
+	beego.Debug("HistoryController.GetLast", name)
+	var history models.History
+	history.Name = name
+	his, err := models.ReadLastHistory(history)
+	if err != nil {
+		beego.Error("HistoryController.GetLast, ReadLastHistory failed", err.Error())
+		return
+	}
+	beego.Debug("HistoryController.GetLast, his:", his)
+	this.Data["json"] = &his[0]
+	this.ServeJSON()
 }

@@ -1,59 +1,749 @@
-2017/05/19 00:00:38 [I] [asm_amd64.s:2086] http server Running on http://:8081
-2017/05/19 00:00:50 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
-2017/05/19 00:00:50 [D] [factoryController.go:67] MainController.Post, id: 6 
-2017/05/19 00:00:50 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:00:50 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
-2017/05/19 00:00:50 [D] [factoryController.go:67] MainController.Post, id: 7 
-2017/05/19 00:00:50 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:00:50 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
-2017/05/19 00:00:50 [D] [histroyController.go:65] HistoryController.Post, id =  3 
-2017/05/19 00:00:50 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:00:50 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
-2017/05/19 00:00:50 [D] [histroyController.go:65] HistoryController.Post, id =  5 
-2017/05/19 00:00:50 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:00:55 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
-2017/05/19 00:00:55 [D] [factoryController.go:67] MainController.Post, id: 6 
-2017/05/19 00:00:55 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:00:55 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
-2017/05/19 00:00:55 [D] [factoryController.go:67] MainController.Post, id: 7 
-2017/05/19 00:00:55 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:00:55 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
-2017/05/19 00:00:55 [D] [histroyController.go:65] HistoryController.Post, id =  3 
-2017/05/19 00:00:55 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:00:55 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
-2017/05/19 00:00:55 [D] [histroyController.go:65] HistoryController.Post, id =  5 
-2017/05/19 00:00:55 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:00:55 [D] [histroyController.go:23] HistoryController.Get: factory= 纸箱厂-1 date= 2017-5-18 class= A group= 一号线 
-2017/05/19 00:00:55 [D] [paper.go:77] ReadHistory: {0 纸箱厂-1  A 2017-5-18 一号线} 
-2017/05/19 00:00:55 [D] [histroyController.go:40] HistoryController.Get: {3 纸箱厂-1 开工时间=2017-05-18 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-05-18 00:00:00 一号线} 
-2017/05/19 00:01:00 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
-2017/05/19 00:01:00 [D] [factoryController.go:67] MainController.Post, id: 6 
-2017/05/19 00:01:00 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:01:00 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
-2017/05/19 00:01:00 [D] [factoryController.go:67] MainController.Post, id: 7 
-2017/05/19 00:01:00 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:01:00 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
-2017/05/19 00:01:00 [D] [histroyController.go:65] HistoryController.Post, id =  3 
-2017/05/19 00:01:00 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:01:00 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
-2017/05/19 00:01:00 [D] [histroyController.go:65] HistoryController.Post, id =  5 
-2017/05/19 00:01:00 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:01:05 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
-2017/05/19 00:01:05 [D] [factoryController.go:67] MainController.Post, id: 6 
-2017/05/19 00:01:05 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:01:05 [D] [factoryController.go:50] MainController requestBody:{"Factory":"纸箱厂-1","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
-2017/05/19 00:01:05 [D] [factoryController.go:67] MainController.Post, id: 7 
-2017/05/19 00:01:05 [D] [factoryController.go:68] MainController.Post, created: false 
-2017/05/19 00:01:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"A","Group":"一号线"} 
-2017/05/19 00:01:05 [D] [histroyController.go:65] HistoryController.Post, id =  3 
-2017/05/19 00:01:05 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:01:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"纸箱厂-1","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-05-18","Class":"D","Group":"二号线"} 
-2017/05/19 00:01:05 [D] [histroyController.go:65] HistoryController.Post, id =  5 
-2017/05/19 00:01:05 [D] [histroyController.go:66] HistoryController.Post, created =  false 
-2017/05/19 00:07:49 [D] [factoryController.go:86] MainController.getGroups, factory: 纸箱厂-1 
-2017/05/19 00:07:49 [D] [factoryController.go:95] MainController.getGroups, factories [{6 纸箱厂-1 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {7 纸箱厂-1 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
-2017/05/19 00:07:49 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线, 
-2017/05/19 00:07:50 [D] [factoryController.go:21] mainController.get, factory: 纸箱厂-1 
-2017/05/19 00:07:50 [D] [factoryController.go:22] mainController.get, group: 一号线 
-2017/05/19 00:07:50 [D] [factoryController.go:31] MainController.Get, before query factory: {0 纸箱厂-1  一号线} 
-2017/05/19 00:07:50 [D] [factoryController.go:38] MainController.Get, after query factory: {6 纸箱厂-1 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/04 09:59:15 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/06/04 09:59:15 [D] [factoryController.go:67] MainController.Post, id: 4 
+2017/06/04 09:59:15 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 09:59:15 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/06/04 09:59:15 [D] [factoryController.go:67] MainController.Post, id: 5 
+2017/06/04 09:59:15 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 09:59:15 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"一号线"} 
+2017/06/04 09:59:15 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 09:59:15 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 09:59:15 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 09:59:15 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-03","Class":"D","Group":"二号线"} 
+2017/06/04 09:59:15 [D] [histroyController.go:65] HistoryController.Post, id =  9 
+2017/06/04 09:59:15 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 09:59:15 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 10:04:10 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/04 10:04:10 [D] [factoryController.go:95] MainController.getGroups, factories [{4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {5 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/04 10:04:10 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线, 
+2017/06/04 10:04:12 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/04 10:04:12 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/04 10:04:12 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/04 10:04:12 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/04 10:04:18 [D] [histroyController.go:23] HistoryController.Get: factory= c date= 2017-06-03 class= A group= 一号线 
+2017/06/04 10:04:18 [D] [paper.go:88] ReadHistory: {0 c  A 2017-06-03 一号线} 
+2017/06/04 10:04:18 [D] [histroyController.go:40] HistoryController.Get: {8 c 开工时间=2017-05-18 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-06-03 00:00:00 一号线} 
+2017/06/04 10:56:17 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/04 11:03:25 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:03:25 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 11:03:25 [D] [factoryController.go:68] MainController.Post, created: true 
+2017/06/04 11:03:25 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:03:25 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 11:03:25 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 11:03:25 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 11:13:50 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:13:50 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 11:13:50 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 11:13:50 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:13:50 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 11:13:50 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 11:13:50 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 11:15:05 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:15:05 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 11:15:05 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 11:15:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:15:05 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 11:15:05 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 11:15:05 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 11:15:20 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:15:20 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 11:15:20 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 11:15:20 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:15:20 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 11:15:20 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 11:15:20 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 11:17:30 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:17:30 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 11:17:30 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 11:17:30 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:17:30 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 11:17:30 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 11:17:30 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 11:18:15 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:18:15 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 11:18:15 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 11:18:15 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:18:15 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 11:18:15 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 11:18:15 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 11:26:15 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:26:15 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 11:26:15 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 11:26:15 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 11:26:15 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 11:26:15 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 11:26:15 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 20:16:55 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 20:16:55 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 20:16:55 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 20:16:55 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 20:16:55 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 20:16:55 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 20:16:55 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 20:19:10 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 20:19:10 [D] [factoryController.go:67] MainController.Post, id: 8 
+2017/06/04 20:19:10 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/04 20:19:10 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-01","Class":"A","Group":"C:\\Users\\Administrator\\Desktop\\test\\一号线"} 
+2017/06/04 20:19:10 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/04 20:19:10 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 20:19:10 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/04 20:19:10 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"C:\\Users\\Administrator\\Desktop\\test\\二号线"} 
+2017/06/04 20:19:10 [D] [factoryController.go:67] MainController.Post, id: 9 
+2017/06/04 20:19:10 [D] [factoryController.go:68] MainController.Post, created: true 
+2017/06/04 20:19:10 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-03","Class":"D","Group":"C:\\Users\\Administrator\\Desktop\\test\\二号线"} 
+2017/06/04 20:19:10 [D] [histroyController.go:65] HistoryController.Post, id =  9 
+2017/06/04 20:19:10 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/04 20:19:10 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:08:43 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:12:20 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/06/10 17:12:20 [D] [factoryController.go:67] MainController.Post, id: 2 
+2017/06/10 17:12:20 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 17:12:20 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-010","Class":"A","Group":"一号线"} 
+2017/06/10 17:12:20 [D] [histroyController.go:65] HistoryController.Post, id =  6 
+2017/06/10 17:12:20 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/10 17:12:20 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [{1 c D 2017-05-30 一号线 false}] 
+2017/06/10 17:12:20 [D] [paper.go:134] UpdateForceData {1 c D 2017-05-30 一号线 true} 
+2017/06/10 17:12:20 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/06/10 17:12:20 [D] [factoryController.go:67] MainController.Post, id: 3 
+2017/06/10 17:12:20 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 17:12:20 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-010","Class":"B","Group":"二号线"} 
+2017/06/10 17:12:20 [D] [histroyController.go:65] HistoryController.Post, id =  7 
+2017/06/10 17:12:20 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/10 17:12:20 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:14:00 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/06/10 17:14:00 [D] [factoryController.go:67] MainController.Post, id: 2 
+2017/06/10 17:14:00 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 17:14:00 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-010","Class":"A","Group":"一号线"} 
+2017/06/10 17:14:00 [D] [histroyController.go:65] HistoryController.Post, id =  6 
+2017/06/10 17:14:00 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/10 17:14:00 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:14:00 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/06/10 17:14:00 [D] [factoryController.go:67] MainController.Post, id: 3 
+2017/06/10 17:14:00 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 17:14:00 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-010","Class":"B","Group":"二号线"} 
+2017/06/10 17:14:00 [D] [histroyController.go:65] HistoryController.Post, id =  7 
+2017/06/10 17:14:00 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/10 17:14:00 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:14:00 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-010","Class":"B","Group":"三号线"} 
+2017/06/10 17:14:00 [D] [histroyController.go:65] HistoryController.Post, id =  7 
+2017/06/10 17:14:00 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/10 17:14:00 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:15:25 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/06/10 17:15:25 [D] [factoryController.go:67] MainController.Post, id: 2 
+2017/06/10 17:15:25 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 17:15:25 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-10","Class":"A","Group":"一号线"} 
+2017/06/10 17:15:25 [D] [histroyController.go:65] HistoryController.Post, id =  8 
+2017/06/10 17:15:25 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/10 17:15:25 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:15:25 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/06/10 17:15:25 [D] [factoryController.go:67] MainController.Post, id: 3 
+2017/06/10 17:15:25 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 17:15:25 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-10","Class":"B","Group":"二号线"} 
+2017/06/10 17:15:25 [D] [histroyController.go:65] HistoryController.Post, id =  9 
+2017/06/10 17:15:25 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/10 17:15:25 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:15:25 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-09","Class":"D","Group":"三号线"} 
+2017/06/10 17:15:25 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/10 17:15:25 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/10 17:15:25 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 17:16:33 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:16:33 [D] [paper.go:144] ReadHistoryGorup {0 c  } 
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] the request url is  /history/c/groups
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] Handler crashed with error <Condition.And> args cannot empty
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_conds.go:51
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_queryset.go:77
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] <autogenerated>:103
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/models/paper.go:146
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/controllers/histroyController.go:108
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:434
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:302
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:802
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 17:16:33 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 17:17:10 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:17:10 [D] [paper.go:144] ReadHistoryGorup {0 c  } 
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] the request url is  /history/c/groups
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] Handler crashed with error <Condition.And> args cannot empty
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_conds.go:51
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_queryset.go:77
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] <autogenerated>:103
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/models/paper.go:146
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/controllers/histroyController.go:108
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:434
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:302
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:802
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 17:17:10 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 17:17:42 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:17:42 [D] [paper.go:144] ReadHistoryGorup {0 c  } 
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] the request url is  /history/c/groups
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] Handler crashed with error <Condition.And> args cannot empty
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_conds.go:51
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_queryset.go:77
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] <autogenerated>:103
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/models/paper.go:146
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/controllers/histroyController.go:108
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:434
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:302
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:802
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 17:17:42 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 17:21:50 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:21:56 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:21:56 [D] [paper.go:144] ReadHistoryGorup {0 c  } 
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] the request url is  /history/c/groups
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] Handler crashed with error <Condition.And> args cannot empty
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_conds.go:51
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_queryset.go:77
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] <autogenerated>:103
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/models/paper.go:146
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/controllers/histroyController.go:108
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:434
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:302
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:802
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 17:21:56 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 17:23:03 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:23:14 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:23:14 [D] [paper.go:144] ReadHistoryGorup {0 c  } 
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] the request url is  /history/c/groups
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] Handler crashed with error wrong object type `*[]models.Factory` for rows scan, need *[]*PaperManagementServer/models.History or *[]PaperManagementServer/models.History
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/db.go:902
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_queryset.go:189
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/models/paper.go:146
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/controllers/histroyController.go:108
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:434
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:302
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:802
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 17:23:14 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 17:25:14 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:25:42 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:25:42 [D] [paper.go:144] ReadHistoryGorup {0 c  } 
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] the request url is  /history/c/groups
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] Handler crashed with error wrong object type `*[]models.Factory` for rows scan, need *[]*PaperManagementServer/models.History or *[]PaperManagementServer/models.History
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/db.go:902
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_queryset.go:189
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/models/paper.go:146
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/controllers/histroyController.go:108
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:434
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:302
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:802
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 17:25:42 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 17:30:42 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:30:48 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:30:48 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 17:30:48 [D] [paper.go:147] ReadHistoryGorup [{4 c 开工时间=2017-05-18 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-05-25 一号线} {5 c 开工时间=2017-05-18 05:12:12&完成时间=2017-05-18 16:22:22&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 D 2017-05-18 二号线} {8 c 开工时间=2017-06-01 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-06-10 一号线} {9 c 开工时间=2017-05-18 05:12:12&完成时间=2017-05-18 16:22:22&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 B 2017-06-10 二号线} {10 c 开工时间=2017-05-18 05:12:12&完成时间=2017-05-18 16:22:22&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 D 2017-06-09 三号线}] 
+2017/06/10 17:30:48 [D] [histroyController.go:113] HistoryController.GetGroups, factories: [{4 c 开工时间=2017-05-18 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-05-25 一号线} {5 c 开工时间=2017-05-18 05:12:12&完成时间=2017-05-18 16:22:22&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 D 2017-05-18 二号线} {8 c 开工时间=2017-06-01 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-06-10 一号线} {9 c 开工时间=2017-05-18 05:12:12&完成时间=2017-05-18 16:22:22&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 B 2017-06-10 二号线} {10 c 开工时间=2017-05-18 05:12:12&完成时间=2017-05-18 16:22:22&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 D 2017-06-09 三号线}] 
+2017/06/10 17:31:44 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:31:48 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:31:48 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 17:31:48 [D] [paper.go:147] ReadHistoryGorup [{0     一号线} {0     二号线} {0     一号线} {0     二号线} {0     三号线}] 
+2017/06/10 17:31:48 [D] [histroyController.go:113] HistoryController.GetGroups, factories: [{0     一号线} {0     二号线} {0     一号线} {0     二号线} {0     三号线}] 
+2017/06/10 17:32:30 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:34:57 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:35:01 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 17:35:01 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 17:35:01 [D] [paper.go:147] ReadHistoryGorup [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 17:35:01 [D] [histroyController.go:113] HistoryController.GetGroups, factories: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 17:41:11 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:41:22 [D] [histroyController.go:123] HistoryController.GetGroups c 
+2017/06/10 17:41:22 [D] [paper.go:155] ReadFactoryClass {0 c    } 
+2017/06/10 17:41:22 [E] [histroyController.go:129] HistoryController.GetGroups, readHistoryGorup failed Error 1055: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'paper_management.T0.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by 
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] the request url is  /history/c/class
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] Handler crashed with error can't find templatefile in the path:historycontroller/getclass.tpl
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/template.go:64
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/controller.go:249
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/controller.go:200
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/controller.go:184
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:809
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 17:41:22 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 17:41:43 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:43:14 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:43:36 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:44:11 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 17:44:17 [D] [histroyController.go:123] HistoryController.GetClass c 
+2017/06/10 17:44:17 [D] [paper.go:154] ReadFactoryClass {0 c    } 
+2017/06/10 17:44:17 [D] [histroyController.go:132] HistoryController.GetGroups, his: [{0   A  } {0   B  } {0   D  }] 
+2017/06/10 19:04:11 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:04:11 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:04:11 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:04:13 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:04:13 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:04:13 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:04:13 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:05:42 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:05:42 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:05:42 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:05:43 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:05:43 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:05:43 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:05:43 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:05:52 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:05:52 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:05:52 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:05:52 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:05:55 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:05:55 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:05:55 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:05:55 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:02 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:02 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:02 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:02 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:07 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:07 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:07 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:07 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:13 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:13 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:13 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:13 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:19 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:19 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:19 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:19 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:25 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:25 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:25 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:25 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:32 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:32 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:32 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:32 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:38 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:38 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:38 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:38 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:44 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:44 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:44 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:44 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:50 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:50 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:50 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:50 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:06:56 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:06:56 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:06:56 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:06:56 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:02 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:02 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:02 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:02 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:08 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:08 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:08 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:08 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:14 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:14 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:14 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:14 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:20 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:20 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:20 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:20 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:29 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:29 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:29 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:29 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:32 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:32 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:32 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:32 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:38 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:38 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:38 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:38 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:44 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:44 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:44 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:44 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:50 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:50 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:50 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:50 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:07:56 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:07:56 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:07:56 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:07:56 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:08:02 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:08:02 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:08:02 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:08:02 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:08:09 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:08:09 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:08:09 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:08:09 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:08:21 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:08:21 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:08:21 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:09:36 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:09:36 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:09:36 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:13:22 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:13:22 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:13:22 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:13:23 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:13:23 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:13:23 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:13:23 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:13:29 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:13:29 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:13:29 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:13:29 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:13:35 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:13:35 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:13:35 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:13:35 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:13:41 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:13:41 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:13:41 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:13:41 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:13:47 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:13:47 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:13:47 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:13:47 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:13:53 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:13:53 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:13:53 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:13:53 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:13:59 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:13:59 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:13:59 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:13:59 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:14:05 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:14:05 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:14:05 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:14:05 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:14:11 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:14:11 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:14:11 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:14:11 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:14:17 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:14:17 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:14:17 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:14:17 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:14:23 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:14:23 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:14:23 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:14:23 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:14:29 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:14:29 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:14:30 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:14:30 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:14:38 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:14:38 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:14:38 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:14:39 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:14:39 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:14:39 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:14:39 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:14:45 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:14:45 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:14:45 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:16:12 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:16:12 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:16:12 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:16:13 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:16:13 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:16:13 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:16:13 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:16:21 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:16:21 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:16:21 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:18:36 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:18:36 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:18:36 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:18:37 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:18:37 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:18:37 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:18:37 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:18:54 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:18:54 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:18:54 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:27:17 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:27:17 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:27:17 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:27:19 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:27:19 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:27:19 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:27:19 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:28:49 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:28:49 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:28:49 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:28:52 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:28:52 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:28:52 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:28:52 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:28:56 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:28:56 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:28:56 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:28:56 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:29:02 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:29:02 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:29:02 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:29:02 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:29:14 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:29:14 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:29:14 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:29:14 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:29:20 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:29:20 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:29:20 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:29:20 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:30:07 [D] [histroyController.go:123] HistoryController.GetClass c 
+2017/06/10 19:30:07 [D] [paper.go:154] ReadFactoryClass {0 c    } 
+2017/06/10 19:30:07 [D] [histroyController.go:132] HistoryController.GetGroups, his: [{0   A  } {0   B  } {0   D  }] 
+2017/06/10 19:30:45 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:30:45 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:30:45 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:30:46 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:30:46 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:30:46 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:30:46 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:30:50 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:30:50 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:30:50 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:31:29 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/10 19:31:29 [D] [factoryController.go:95] MainController.getGroups, factories [{1 c 排产=1345&开工时间=2017-03-13 08:08&班组=A&切长=1234&本班累计=12345&1车车速=120 } {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {3 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/10 19:31:29 [D] [factoryController.go:105] MainController.getGroups, groupJson:,一号线,二号线, 
+2017/06/10 19:31:30 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/10 19:31:30 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/10 19:31:30 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/10 19:31:30 [D] [factoryController.go:38] MainController.Get, after query factory: {2 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/10 19:31:35 [D] [histroyController.go:123] HistoryController.GetClass c 
+2017/06/10 19:31:35 [D] [paper.go:154] ReadFactoryClass {0 c    } 
+2017/06/10 19:31:35 [D] [histroyController.go:132] HistoryController.GetGroups, his: [{0   A  } {0   B  } {0   D  }] 
+2017/06/10 19:31:35 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:31:35 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:31:35 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:31:43 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:31:43 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:31:43 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:31:46 [D] [histroyController.go:123] HistoryController.GetClass c 
+2017/06/10 19:31:46 [D] [paper.go:154] ReadFactoryClass {0 c    } 
+2017/06/10 19:31:46 [D] [histroyController.go:132] HistoryController.GetGroups, his: [{0   A  } {0   B  } {0   D  }] 
+2017/06/10 19:31:58 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:31:58 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:31:58 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:32:00 [D] [histroyController.go:123] HistoryController.GetClass c 
+2017/06/10 19:32:00 [D] [paper.go:154] ReadFactoryClass {0 c    } 
+2017/06/10 19:32:00 [D] [histroyController.go:132] HistoryController.GetGroups, his: [{0   A  } {0   B  } {0   D  }] 
+2017/06/10 19:32:03 [D] [histroyController.go:23] HistoryController.Get: factory= c date= 2017-06-11 class= A group= 三号线 
+2017/06/10 19:32:03 [D] [paper.go:88] ReadHistory: {0 c  A 2017-06-11 三号线} 
+2017/06/10 19:32:03 [E] [histroyController.go:37] HistoryController.Get: read history failed 
+2017/06/10 19:32:09 [D] [histroyController.go:23] HistoryController.Get: factory= c date= 2017-06-10 class= A group= 三号线 
+2017/06/10 19:32:09 [D] [paper.go:88] ReadHistory: {0 c  A 2017-06-10 三号线} 
+2017/06/10 19:32:09 [E] [histroyController.go:37] HistoryController.Get: read history failed 
+2017/06/10 19:32:25 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:32:25 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:32:25 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:32:31 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:32:31 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:32:31 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:33:41 [D] [histroyController.go:123] HistoryController.GetClass c 
+2017/06/10 19:33:41 [D] [paper.go:154] ReadFactoryClass {0 c    } 
+2017/06/10 19:33:41 [D] [histroyController.go:132] HistoryController.GetGroups, his: [{0   A  } {0   B  } {0   D  }] 
+2017/06/10 19:37:45 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 19:37:54 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 19:37:54 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 19:37:54 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/10 19:49:05 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/06/10 19:49:05 [D] [factoryController.go:67] MainController.Post, id: 2 
+2017/06/10 19:49:05 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 19:49:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-09","Class":"C","Group":"一号线"} 
+2017/06/10 19:49:05 [D] [histroyController.go:65] HistoryController.Post, id =  11 
+2017/06/10 19:49:05 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/10 19:49:05 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 19:49:05 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/06/10 19:49:05 [D] [factoryController.go:67] MainController.Post, id: 3 
+2017/06/10 19:49:05 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/10 19:49:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-10","Class":"B","Group":"二号线"} 
+2017/06/10 19:49:05 [D] [histroyController.go:65] HistoryController.Post, id =  9 
+2017/06/10 19:49:05 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/10 19:49:05 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 19:49:05 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-09","Class":"D","Group":"三号线"} 
+2017/06/10 19:49:05 [D] [histroyController.go:65] HistoryController.Post, id =  10 
+2017/06/10 19:49:05 [D] [histroyController.go:66] HistoryController.Post, created =  false 
+2017/06/10 19:49:05 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/10 20:04:50 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 20:05:15 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 20:05:15 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 20:05:15 [E] [histroyController.go:110] HistoryController.GetGroups, readHistoryGorup failed Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group from history where name = ? order by decode(group, '一号线', 1, '二号' at line 1 
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] the request url is  /history/c/groups
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] Handler crashed with error can't find templatefile in the path:historycontroller/getgroups.tpl
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/template.go:64
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/controller.go:249
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/controller.go:200
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/controller.go:184
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:809
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/06/10 20:05:15 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/06/10 20:18:25 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/10 20:18:37 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/10 20:18:37 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/10 20:18:37 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/11 11:21:53 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/11 11:26:52 [D] [histroyController.go:142] HistoryController.GetLast c 
+2017/06/11 11:26:52 [D] [paper.go:165] ReadLastHistory {0 c    } 
+2017/06/11 11:26:52 [D] [histroyController.go:150] HistoryController.GetLast, his: [{0   A 2017-06-03 00:00:00 一号线} {0   A 2017-05-25 00:00:00 一号线} {0   D 2017-05-18 00:00:00 二号线} {0   D 2016-10-20 00:00:00 一号线}] 
+2017/06/11 11:28:52 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/06/11 11:29:04 [D] [histroyController.go:142] HistoryController.GetLast c 
+2017/06/11 11:29:04 [D] [paper.go:165] ReadLastHistory {0 c    } 
+2017/06/11 11:29:04 [D] [histroyController.go:150] HistoryController.GetLast, his: [{8 c  A 2017-06-03 00:00:00 一号线} {6 c  A 2017-05-25 00:00:00 一号线} {7 c  D 2017-05-18 00:00:00 二号线} {2 c  D 2016-10-20 00:00:00 一号线}] 
+2017/06/11 13:35:58 [D] [factoryController.go:86] MainController.getGroups, factory: 测试 
+2017/06/11 13:35:58 [D] [factoryController.go:95] MainController.getGroups, factories [] 
+2017/06/11 13:35:58 [D] [factoryController.go:105] MainController.getGroups, groupJson: 
+2017/06/11 13:36:15 [D] [factoryController.go:86] MainController.getGroups, factory: 测试 
+2017/06/11 13:36:15 [D] [factoryController.go:95] MainController.getGroups, factories [] 
+2017/06/11 13:36:15 [D] [factoryController.go:105] MainController.getGroups, groupJson: 
+2017/06/11 13:36:32 [D] [factoryController.go:86] MainController.getGroups, factory: 测试 
+2017/06/11 13:36:32 [D] [factoryController.go:95] MainController.getGroups, factories [] 
+2017/06/11 13:36:32 [D] [factoryController.go:105] MainController.getGroups, groupJson: 
+2017/06/11 13:39:21 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/11 13:39:21 [D] [factoryController.go:95] MainController.getGroups, factories [{4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {5 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线} {8 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% C:\Users\Administrator\Desktop\test\一号线} {9 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% C:\Users\Administrator\Desktop\test\二号线}] 
+2017/06/11 13:39:21 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线,C:\Users\Administrator\Desktop\test\一号线,C:\Users\Administrator\Desktop\test\二号线, 
+2017/06/11 13:39:22 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/11 13:39:22 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/11 13:39:22 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/11 13:39:22 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/11 13:39:26 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/11 13:39:26 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/11 13:39:26 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/11 13:39:26 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/11 13:39:32 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/11 13:39:32 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/11 13:39:32 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/11 13:39:32 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/11 13:40:05 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/11 13:40:05 [D] [factoryController.go:95] MainController.getGroups, factories [{4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {5 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/11 13:40:05 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线, 
+2017/06/11 13:40:06 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/11 13:40:06 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/11 13:40:06 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/11 13:40:06 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/11 13:40:26 [D] [histroyController.go:142] HistoryController.GetLast c 
+2017/06/11 13:40:26 [D] [paper.go:165] ReadLastHistory {0 c    } 
+2017/06/11 13:40:26 [D] [histroyController.go:150] HistoryController.GetLast, his: [{8 c  A 2017-06-03 00:00:00 一号线} {6 c  A 2017-05-25 00:00:00 一号线} {7 c  D 2017-05-18 00:00:00 二号线} {2 c  D 2016-10-20 00:00:00 一号线}] 
+2017/06/11 13:40:41 [D] [histroyController.go:23] HistoryController.Get: factory= c date= 2017-06-03 class= A group= 一号线 
+2017/06/11 13:40:41 [D] [paper.go:88] ReadHistory: {0 c  A 2017-06-03 一号线} 
+2017/06/11 13:40:41 [D] [histroyController.go:40] HistoryController.Get: {8 c 开工时间=2017-05-18 06:33:33&完成时间=2017-05-18 11:11:11&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 A 2017-06-03 00:00:00 一号线} 
+2017/06/11 13:42:20 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=1111\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"一号线"} 
+2017/06/11 13:42:20 [D] [factoryController.go:67] MainController.Post, id: 4 
+2017/06/11 13:42:20 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/11 13:42:20 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-06-01 06:33:33\u0026完成时间=2017-05-18 11:11:11\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-09","Class":"C","Group":"一号线"} 
+2017/06/11 13:42:20 [D] [histroyController.go:65] HistoryController.Post, id =  11 
+2017/06/11 13:42:20 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/11 13:42:20 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/11 13:42:20 [D] [factoryController.go:50] MainController requestBody:{"Factory":"c","Other":"排产=2222\u0026切长=1234\u0026本班累计=12345\u00261车车速=120\u0026合格=666\u0026车速=180\u0026本班剩余=1000\u00262车车速=130\u0026剩余=2222\u0026平均=160\u0026行车数量=128\u00263车车速=125\u0026不良品=888\u0026行机时间=4567\u0026行机次数=56\u0026生产损耗=25%\u0026开工时间=2017-03-13 08:08\u0026时间=2017-03-13 08:08\u0026班组=A\u0026修边损耗=20%","Time":"","Class":"","Group":"二号线"} 
+2017/06/11 13:42:20 [D] [factoryController.go:67] MainController.Post, id: 5 
+2017/06/11 13:42:20 [D] [factoryController.go:68] MainController.Post, created: false 
+2017/06/11 13:42:20 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-10","Class":"B","Group":"二号线"} 
+2017/06/11 13:42:20 [D] [histroyController.go:65] HistoryController.Post, id =  12 
+2017/06/11 13:42:20 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/11 13:42:20 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/11 13:42:20 [D] [histroyController.go:51] HistoryController requestBody:{"Factory":"c","Other":"开工时间=2017-05-18 05:12:12\u0026完成时间=2017-05-18 16:22:22\u0026工作时间=389\u0026停机时间=0.52\u0026停机次数=7\u0026平均车速=100\u0026平均门幅=1265\u0026订单笔数=287\u0026换楞次数=20\u0026累计米数=39626\u0026合格米数=38709\u0026累计面积=50132\u0026合格面积=48966\u0026累计重量(kg)=30789\u0026合格重量(kg)=30060\u0026累计修边(m2)=1876\u0026累计修边(kg)=1011\u0026修边比例(%)=3.72","Time":"2017-06-11","Class":"E","Group":"三号线"} 
+2017/06/11 13:42:20 [D] [histroyController.go:65] HistoryController.Post, id =  13 
+2017/06/11 13:42:20 [D] [histroyController.go:66] HistoryController.Post, created =  true 
+2017/06/11 13:42:20 [D] [histroyController.go:82] HistoryController.Post, forceDatas is [] 
+2017/06/11 13:42:25 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/11 13:42:25 [D] [factoryController.go:95] MainController.getGroups, factories [{4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {5 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/11 13:42:25 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线, 
+2017/06/11 13:42:26 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/11 13:42:26 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/11 13:42:26 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/11 13:42:26 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/11 13:42:30 [D] [histroyController.go:142] HistoryController.GetLast c 
+2017/06/11 13:42:30 [D] [paper.go:165] ReadLastHistory {0 c    } 
+2017/06/11 13:42:30 [D] [histroyController.go:150] HistoryController.GetLast, his: [{13 c  E 2017-06-11 00:00:00 三号线} {12 c  B 2017-06-10 00:00:00 二号线} {11 c  C 2017-06-09 00:00:00 一号线} {8 c  A 2017-06-03 00:00:00 一号线} {6 c  A 2017-05-25 00:00:00 一号线} {7 c  D 2017-05-18 00:00:00 二号线} {2 c  D 2016-10-20 00:00:00 一号线}] 
+2017/06/11 13:42:39 [D] [histroyController.go:23] HistoryController.Get: factory= c date= 2017-06-11 class= E group= 三号线 
+2017/06/11 13:42:39 [D] [paper.go:88] ReadHistory: {0 c  E 2017-06-11 三号线} 
+2017/06/11 13:42:39 [D] [histroyController.go:40] HistoryController.Get: {13 c 开工时间=2017-05-18 05:12:12&完成时间=2017-05-18 16:22:22&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 E 2017-06-11 00:00:00 三号线} 
+2017/06/11 13:42:44 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/11 13:42:44 [D] [factoryController.go:95] MainController.getGroups, factories [{4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {5 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/11 13:42:44 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线, 
+2017/06/11 13:42:45 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/11 13:42:45 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/11 13:42:45 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/11 13:42:45 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/11 13:43:57 [D] [factoryController.go:86] MainController.getGroups, factory: c 
+2017/06/11 13:43:57 [D] [factoryController.go:95] MainController.getGroups, factories [{4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} {5 c 排产=2222&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 二号线}] 
+2017/06/11 13:43:57 [D] [factoryController.go:105] MainController.getGroups, groupJson:一号线,二号线, 
+2017/06/11 13:43:58 [D] [factoryController.go:21] mainController.get, factory: c 
+2017/06/11 13:43:58 [D] [factoryController.go:22] mainController.get, group: 一号线 
+2017/06/11 13:43:58 [D] [factoryController.go:31] MainController.Get, before query factory: {0 c  一号线} 
+2017/06/11 13:43:58 [D] [factoryController.go:38] MainController.Get, after query factory: {4 c 排产=1111&切长=1234&本班累计=12345&1车车速=120&合格=666&车速=180&本班剩余=1000&2车车速=130&剩余=2222&平均=160&行车数量=128&3车车速=125&不良品=888&行机时间=4567&行机次数=56&生产损耗=25%&开工时间=2017-03-13 08:08&时间=2017-03-13 08:08&班组=A&修边损耗=20% 一号线} 
+2017/06/11 13:44:10 [D] [histroyController.go:142] HistoryController.GetLast c 
+2017/06/11 13:44:10 [D] [paper.go:165] ReadLastHistory {0 c    } 
+2017/06/11 13:44:10 [D] [histroyController.go:150] HistoryController.GetLast, his: [{13 c  E 2017-06-11 00:00:00 三号线} {12 c  B 2017-06-10 00:00:00 二号线} {11 c  C 2017-06-09 00:00:00 一号线} {8 c  A 2017-06-03 00:00:00 一号线} {6 c  A 2017-05-25 00:00:00 一号线} {7 c  D 2017-05-18 00:00:00 二号线} {2 c  D 2016-10-20 00:00:00 一号线}] 
+2017/06/11 13:44:26 [D] [histroyController.go:104] HistoryController.GetGroups c 
+2017/06/11 13:44:26 [D] [paper.go:144] ReadHistoryGorup {0 c    } 
+2017/06/11 13:44:26 [D] [histroyController.go:113] HistoryController.GetGroups, his: [{0     一号线} {0     三号线} {0     二号线}] 
+2017/06/11 13:45:03 [D] [histroyController.go:123] HistoryController.GetClass c 
+2017/06/11 13:45:03 [D] [paper.go:155] ReadFactoryClass {0 c    } 
+2017/06/11 13:45:03 [D] [histroyController.go:132] HistoryController.GetGroups, his: [{0   A  } {0   B  } {0   C  } {0   D  } {0   E  }] 
+2017/07/15 14:50:17 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/15 15:07:31 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/15 15:07:52 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/15 15:08:02 [D] [paper.go:197] ReadOrder {0 开封 } 
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] the request url is  /order
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] Handler crashed with error <Condition.And> args cannot empty
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/runtime/panic.go:458
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_conds.go:51
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/orm/orm_queryset.go:77
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] <autogenerated>:103
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/models/paper.go:199
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] F:/goProject/src/PaperManagementServer/controllers/orderController.go:64
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:479
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:434
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/reflect/value.go:302
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] F:/goProject/src/github.com/astaxie/beego/router.go:802
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:2202
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/net/http/server.go:1579
+2017/07/15 15:08:02 [C] [asm_amd64.s:479] E:/go/src/runtime/asm_amd64.s:2086
+2017/07/15 15:09:51 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/15 15:09:55 [D] [paper.go:197] ReadOrder {0 开封 } 
+2017/07/15 15:09:55 [D] [orderController.go:70] OrderController, read orders: [{1 开封 {"订单号":"1", "客户简称":"上海客户","材质":"铜"}}] 
+2017/07/15 15:33:05 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/15 16:21:52 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/15 16:30:42 [D] [finishInfoController.go:57] cName= 开封 
+2017/07/15 16:30:42 [D] [finishInfoController.go:58] startTime= 2017-07-10 
+2017/07/15 16:30:42 [D] [finishInfoController.go:59] finishTime= 2017-07-15 
+2017/07/15 16:30:42 [D] [paper.go:223] ReadFinishInfo {0 开封  2017-07-10 2017-07-15} 
+2017/07/15 16:30:42 [D] [finishInfoController.go:76] FinishInfoController, read finishInfos: [{1 开封 {"订单号":"1", "客户简称":"上海客户","材质":"铜"} 2017-07-10 2017-07-15}] 
+2017/07/15 16:52:28 [D] [histroyController.go:23] HistoryController.Get: factory= c date= 2016-10-20 class= D group= 一号线 
+2017/07/15 16:52:28 [D] [paper.go:106] ReadHistory: {0 c  D 2016-10-20 一号线} 
+2017/07/15 16:52:28 [D] [histroyController.go:40] HistoryController.Get: {2 c 开工时间=2016-10-20 07:48:34&完成时间=2016-10-20 14:17:28&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 D 2016-10-20 00:00:00 一号线} 
