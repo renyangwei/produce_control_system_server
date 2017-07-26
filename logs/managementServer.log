@@ -747,3 +747,32 @@
 2017/07/15 16:52:28 [D] [histroyController.go:23] HistoryController.Get: factory= c date= 2016-10-20 class= D group= 一号线 
 2017/07/15 16:52:28 [D] [paper.go:106] ReadHistory: {0 c  D 2016-10-20 一号线} 
 2017/07/15 16:52:28 [D] [histroyController.go:40] HistoryController.Get: {2 c 开工时间=2016-10-20 07:48:34&完成时间=2016-10-20 14:17:28&工作时间=389&停机时间=0.52&停机次数=7&平均车速=100&平均门幅=1265&订单笔数=287&换楞次数=20&累计米数=39626&合格米数=38709&累计面积=50132&合格面积=48966&累计重量(kg)=30789&合格重量(kg)=30060&累计修边(m2)=1876&累计修边(kg)=1011&修边比例(%)=3.72 D 2016-10-20 00:00:00 一号线} 
+2017/07/23 16:07:19 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/23 16:08:58 [D] [paper.go:199] ReadOrder {0 测试 } 
+2017/07/23 16:08:58 [D] [orderController.go:70] OrderController, read orders: [{1 测试 {"订单号":"2", "客户简称":"大连客户","材质":"金"}}] 
+2017/07/23 16:13:09 [D] [finishInfoController.go:57] cName= 测试 
+2017/07/23 16:13:09 [D] [finishInfoController.go:58] startTime= 2017-07-10 
+2017/07/23 16:13:09 [D] [finishInfoController.go:59] finishTime= 2017-07-15 
+2017/07/23 16:13:09 [D] [paper.go:223] ReadFinishInfo {0 测试  2017-07-10 2017-07-15} 
+2017/07/23 16:13:09 [D] [finishInfoController.go:76] FinishInfoController, read finishInfos: [] 
+2017/07/23 16:16:27 [I] [asm_amd64.s:2086] http server Running on http://:8081
+2017/07/23 16:21:07 [D] [finishInfoController.go:57] cName= 测试 
+2017/07/23 16:21:07 [D] [finishInfoController.go:58] startTime= 2017-07-20 
+2017/07/23 16:21:07 [D] [finishInfoController.go:59] finishTime= 2017-07-23 
+2017/07/23 16:21:07 [D] [paper.go:223] ReadFinishInfo {0 测试  2017-07-20 2017-07-23} 
+2017/07/23 16:21:07 [D] [finishInfoController.go:76] FinishInfoController, read finishInfos: [{1 测试 {"订单号":"2", "客户简称":"大连客户","材质":"金","合格数":"30"} 2017-07-20 2017-07-23}] 
+2017/07/23 16:21:18 [D] [finishInfoController.go:57] cName= 测试 
+2017/07/23 16:21:18 [D] [finishInfoController.go:58] startTime= 2017-07-21 
+2017/07/23 16:21:18 [D] [finishInfoController.go:59] finishTime= 2017-07-22 
+2017/07/23 16:21:18 [D] [paper.go:223] ReadFinishInfo {0 测试  2017-07-21 2017-07-22} 
+2017/07/23 16:21:18 [D] [finishInfoController.go:76] FinishInfoController, read finishInfos: [] 
+2017/07/23 16:21:36 [D] [finishInfoController.go:57] cName= 测试 
+2017/07/23 16:21:36 [D] [finishInfoController.go:58] startTime= 2017-07-20 
+2017/07/23 16:21:36 [D] [finishInfoController.go:59] finishTime= 2017-07-24 
+2017/07/23 16:21:36 [D] [paper.go:223] ReadFinishInfo {0 测试  2017-07-20 2017-07-24} 
+2017/07/23 16:21:36 [D] [finishInfoController.go:76] FinishInfoController, read finishInfos: [{1 测试 {"订单号":"2", "客户简称":"大连客户","材质":"金","合格数":"30"} 2017-07-20 2017-07-23}] 
+2017/07/23 16:23:28 [D] [finishInfoController.go:57] cName= 测试 
+2017/07/23 16:23:28 [D] [finishInfoController.go:58] startTime= 2017-07-19 
+2017/07/23 16:23:28 [D] [finishInfoController.go:59] finishTime= 2017-07-24 
+2017/07/23 16:23:28 [D] [paper.go:223] ReadFinishInfo {0 测试  2017-07-19 2017-07-24} 
+2017/07/23 16:23:28 [D] [finishInfoController.go:76] FinishInfoController, read finishInfos: [{1 测试 {"订单号":"2", "客户简称":"大连客户","材质":"金","合格数":"30"} 2017-07-20 2017-07-23}] 
