@@ -187,10 +187,10 @@ func ReadLastHistory(history History) (his []History, err error) {
 }
 
 //插入订单
-func InsertOrder(orders []Order) (err error) {
-	beego.Debug("InsertOrder", orders)
+func InsertOrder(order Order) (err error) {
+	beego.Debug("InsertOrder", order)
 	o := orm.NewOrm()
-	_, err = o.Insert(&orders)
+	_, err = o.Insert(&order)
 	return
 }
 
@@ -203,18 +203,19 @@ func ReadOrder(order Order) (orders []Order, err error) {
 }
 
 //删除订单
-func DeleteOrder(orders []Order) (err error) {
-	beego.Debug("DeleteOrder", orders)
+func DeleteOrder(order Order) (err error) {
+	beego.Debug("DeleteOrder", order)
 	o := orm.NewOrm()
-	_, err = o.Delete(&orders)
+	//	_, err = o.Delete(&order)
+	_, err = o.QueryTable("Order").Filter("Cname", order.Cname).Delete()
 	return
 }
 
 //插入完工资料
-func InsertFinishInfo(finishInfos []FinishInfo) (err error) {
-	beego.Debug("InsertFinishInfo", finishInfos)
+func InsertFinishInfo(finishInfo FinishInfo) (err error) {
+	beego.Debug("InsertFinishInfo", finishInfo)
 	o := orm.NewOrm()
-	_, err = o.Insert(&finishInfos)
+	_, err = o.Insert(&finishInfo)
 	return
 }
 
@@ -227,9 +228,9 @@ func ReadFinishInfo(finishInfo FinishInfo) (finishInfos []FinishInfo, err error)
 }
 
 //删除完工资料
-func DeleteFinishInfo(finishInfos []FinishInfo) (err error) {
-	beego.Debug("DeleteFinishInfo", finishInfos)
+func DeleteFinishInfo(finishInfo FinishInfo) (err error) {
+	beego.Debug("DeleteFinishInfo", finishInfo)
 	o := orm.NewOrm()
-	_, err = o.Delete(&finishInfos)
+	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Delete()
 	return
 }

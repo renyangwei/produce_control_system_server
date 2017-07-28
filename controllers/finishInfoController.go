@@ -23,28 +23,22 @@ func (this *FinishInfoController) Post() {
 		beego.Error("FinishInfoController", "unMarshl json:"+err.Error())
 		return
 	}
-	//根据cname查询
 	var finishInfo models.FinishInfo
 	finishInfo.Cname = finishInfos[0].Cname
-	finishInfosQuery, err := models.ReadFinishInfo(finishInfo)
-	if err != nil {
-		this.Ctx.WriteString(err.Error())
-		beego.Error("FinishInfoController", "query finishInfo:"+err.Error())
-		return
-	}
-	//删除完工资料
-	err = models.DeleteFinishInfo(finishInfosQuery)
+	err = models.DeleteFinishInfo(finishInfo)
 	if err != nil {
 		this.Ctx.WriteString(err.Error())
 		beego.Error("FinishInfoController", "delete finishInfo:"+err.Error())
 		return
 	}
 	//插入
-	err = models.InsertFinishInfo(finishInfos)
-	if err != nil {
-		this.Ctx.WriteString(err.Error())
-		beego.Error("FinishInfoController", "insert finishInfo:"+err.Error())
-		return
+	for _, finishInfo = range finishInfos {
+		err = models.InsertFinishInfo(finishInfo)
+		if err != nil {
+			this.Ctx.WriteString(err.Error())
+			beego.Error("FinishInfoController", "insert finishInfo:"+err.Error())
+			return
+		}
 	}
 	this.Ctx.WriteString("post success")
 }

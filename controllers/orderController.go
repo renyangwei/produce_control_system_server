@@ -23,29 +23,23 @@ func (this *OrderController) Post() {
 		beego.Error("OrderController", "unMarshl json:"+err.Error())
 		return
 	}
-	//根据cname查询
+	//删除
 	var order models.Order
 	order.Cname = orders[0].Cname
-	ordersQuery, err := models.ReadOrder(order)
+	err = models.DeleteOrder(order)
 	if err != nil {
 		this.Ctx.WriteString(err.Error())
-		beego.Error("OrderController", "query order by cname:"+err.Error())
-		return
-	}
-	beego.Debug("OrderController, query order by cname:", ordersQuery)
-	//删除
-	err = models.DeleteOrder(ordersQuery)
-	if err != nil {
-		this.Ctx.WriteString(err.Error())
-		beego.Error("OrderController", "delete orders:"+err.Error())
+		beego.Error("OrderController", "delete order:"+err.Error())
 		return
 	}
 	//插入
-	err = models.InsertOrder(orders)
-	if err != nil {
-		this.Ctx.WriteString(err.Error())
-		beego.Error("OrderController", "insert orders:"+err.Error())
-		return
+	for _, order = range orders {
+		err = models.InsertOrder(order)
+		if err != nil {
+			this.Ctx.WriteString(err.Error())
+			beego.Error("OrderController", "insert order:"+err.Error())
+			return
+		}
 	}
 	this.Ctx.WriteString("post success")
 }
