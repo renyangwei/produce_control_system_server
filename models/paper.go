@@ -42,6 +42,7 @@ type FinishInfo struct {
 	Data       string `json:"data"`       //数据
 	StartTime  string `json:"StartTime"`  //开始时间
 	FinishTime string `json:"FinishTime"` //完成时间
+	Group      string `json:"Group"`      //产线
 }
 
 //订单信息
@@ -49,6 +50,7 @@ type Order struct {
 	Id    int64  `orm:"pk;auto"` //Id
 	Cname string `json:"cname"`  //公司名
 	Data  string `json:"data"`   //数据
+	Group string `json:"Group"`  //产线
 }
 
 func init() {
@@ -198,7 +200,7 @@ func InsertOrder(order Order) (err error) {
 func ReadOrder(order Order) (orders []Order, err error) {
 	beego.Debug("ReadOrder", order)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("Order").Filter("Cname", order.Cname).All(&orders)
+	_, err = o.QueryTable("Order").Filter("Cname", order.Cname).Filter("Group", order.Group).All(&orders)
 	return
 }
 
@@ -206,7 +208,6 @@ func ReadOrder(order Order) (orders []Order, err error) {
 func DeleteOrder(order Order) (err error) {
 	beego.Debug("DeleteOrder", order)
 	o := orm.NewOrm()
-	//	_, err = o.Delete(&order)
 	_, err = o.QueryTable("Order").Filter("Cname", order.Cname).Delete()
 	return
 }
@@ -223,7 +224,7 @@ func InsertFinishInfo(finishInfo FinishInfo) (err error) {
 func ReadFinishInfo(finishInfo FinishInfo) (finishInfos []FinishInfo, err error) {
 	beego.Debug("ReadFinishInfo", finishInfo)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("StartTime__gte", finishInfo.StartTime).Filter("FinishTime__lte", finishInfo.FinishTime).All(&finishInfos)
+	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("StartTime__gte", finishInfo.StartTime).Filter("FinishTime__lte", finishInfo.FinishTime).Filter("Group", finishInfo.Group).All(&finishInfos)
 	return
 }
 

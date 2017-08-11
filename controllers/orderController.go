@@ -52,8 +52,10 @@ func (this *OrderController) Get() {
 		beego.Debug("parmas is empty")
 		return
 	}
+	var group = this.GetString("group", "")
 	var order models.Order
 	order.Cname = cName
+	order.Group = group
 	//根据厂名获取订单
 	orders, err := models.ReadOrder(order)
 	if err != nil {
