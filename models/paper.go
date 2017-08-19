@@ -38,8 +38,8 @@ type ForceData struct {
 //完工资料
 type FinishInfo struct {
 	Id         int64  `orm:"pk;auto"`     //Id
-	Cname      string `json:"cname"`      //公司名
-	Data       string `json:"data"`       //数据
+	Cname      string `json:"Cname"`      //公司名
+	Data       string `json:"Data"`       //数据
 	StartTime  string `json:"StartTime"`  //开始时间
 	FinishTime string `json:"FinishTime"` //完成时间
 	Group      string `json:"Group"`      //产线
@@ -48,9 +48,36 @@ type FinishInfo struct {
 //订单信息
 type Order struct {
 	Id    int64  `orm:"pk;auto"` //Id
-	Cname string `json:"cname"`  //公司名
-	Data  string `json:"data"`   //数据
+	Cname string `json:"Cname"`  //公司名
+	Data  string `json:"Data"`   //数据
 	Group string `json:"Group"`  //产线
+}
+
+/*
+搜索请求参数
+*/
+type SearchRequest struct {
+	Id         int64  `orm:"pk;auto"`     //Id
+	Cname      string `json:"Cname"`      //公司名
+	Data       string `json:"Data"`       //搜索内容
+	StartTime  string `json:"StartTime"`  //开始时间
+	FinishTime string `json:"FinishTime"` //完成时间
+	Group      string `json:"Group"`      //产线
+	Type       string `json:"Type"`       //类型，order、finish_info
+	IsSearched bool   `json:"IsSearched"` //是否搜索过
+}
+
+/*
+搜索结果
+*/
+type SearchResult struct {
+	Id         int64  `orm:"pk;auto"`     //Id
+	Cname      string `json:"Cname"`      //公司名
+	Data       string `json:"Data"`       //数据
+	StartTime  string `json:"StartTime"`  //开始时间
+	FinishTime string `json:"FinishTime"` //完成时间
+	Group      string `json:"Group"`      //产线
+	Type       string `json:"Type"`       //类型，order、finish_info
 }
 
 func init() {
@@ -61,6 +88,8 @@ func init() {
 	orm.RegisterModel(new(ForceData))
 	orm.RegisterModel(new(FinishInfo))
 	orm.RegisterModel(new(Order))
+	orm.RegisterModel(new(SearchRequest))
+	orm.RegisterModel(new(SearchResult))
 	orm.RunSyncdb("default", false, true)
 }
 
@@ -234,4 +263,55 @@ func DeleteFinishInfo(finishInfo FinishInfo) (err error) {
 	o := orm.NewOrm()
 	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Delete()
 	return
+}
+
+/*
+搜索订单
+*/
+func SearchOrder(cname string) (orders []Order, err error) {
+	beego.Debug("SearchOrder, cname:", cname)
+	o := orm.NewOrm()
+	_, err = o.QueryTable("Order").Filter("Cname", cname).All(&orders)
+	return
+}
+
+/*
+根据时间段搜索完工资料
+*/
+func SearchFinishInfoByTime(finishInfo FinishInfo) (finishInfos []FinishInfo, err error) {
+	beego.Debug("SearchFinishInfoByTime", finishInfo)
+	o := orm.NewOrm()
+	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("StartTime__gte", finishInfo.StartTime).Filter("FinishTime__lte", finishInfo.FinishTime).All(&finishInfos)
+	return
+}
+
+/*
+搜索所有时间段的完工资料
+*/
+func SearchFinishInfo(cname string) (finishInfos []FinishInfo, err error) {
+	beego.Debug("SearchFinishInfo", cname)
+	o := orm.NewOrm()
+	_, err = o.QueryTable("FinishInfo").Filter("Cname", cname).All(&finishInfos)
+	return
+}
+
+/*
+保存搜索请求
+*/
+func InsertSearchRequest(searchRequest SearchRequest) (err error) {
+	beego.Debug("InsertSearchRequest", searchRequest)
+	o := orm.NewOrm()
+	_, err = o.Insert(&searchRequest)
+	return
+}
+
+/*
+读取搜索请求
+*/
+func ReadSearchRequest(searchRequest SearchRequest) (searchRequests []SearchRequest, err error) {
+	beego.Debug("ReadSearchRequest", searchRequest)
+	o := orm.NewOrm()
+	_, err = o.QueryTable("SearchRequest").Filter("Cname", searchRequest.Cname).Filter("Group", searchRequest.Group).Filter("IsSearched", searchRequest.IsSearched).All(&searchRequests)
+	return
+
 }

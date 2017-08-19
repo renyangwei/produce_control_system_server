@@ -32,5 +32,8 @@ func init() {
 	beego.Router("/order", &controllers.OrderController{}, "get:Get;post:Post")
 	//完工信息
 	beego.Router("/finish_info", &controllers.FinishInfoController{}, "get:Get;post:Post")
+	//搜索接口,
+	// /search?type=order&cname=xxx&data=abc&group=一号线
+	beego.Router("/search", &controllers.SearchController{}, "get:Get;post:Post")
 
 }
