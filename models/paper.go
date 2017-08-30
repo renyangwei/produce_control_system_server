@@ -39,7 +39,7 @@ type ForceData struct {
 type FinishInfo struct {
 	Id         int64  `orm:"pk;auto"`     //Id
 	Cname      string `json:"Cname"`      //公司名
-	Data       string `json:"Data"`       //数据
+	Data       string `orm:"type(text)"`  //数据
 	StartTime  string `json:"StartTime"`  //开始时间
 	FinishTime string `json:"FinishTime"` //完成时间
 	Group      string `json:"Group"`      //产线
@@ -47,10 +47,10 @@ type FinishInfo struct {
 
 //订单信息
 type Order struct {
-	Id    int64  `orm:"pk;auto"` //Id
-	Cname string `json:"Cname"`  //公司名
-	Data  string `json:"Data"`   //数据
-	Group string `json:"Group"`  //产线
+	Id    int64  `orm:"pk;auto"`    //Id
+	Cname string `json:"Cname"`     //公司名
+	Data  string `orm:"type(text)"` //数据
+	Group string `json:"Group"`     //产线
 }
 
 /*
@@ -253,7 +253,7 @@ func InsertFinishInfo(finishInfo FinishInfo) (err error) {
 func ReadFinishInfo(finishInfo FinishInfo) (finishInfos []FinishInfo, err error) {
 	beego.Debug("ReadFinishInfo", finishInfo)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("StartTime__gte", finishInfo.StartTime).Filter("FinishTime__lte", finishInfo.FinishTime).Filter("Group", finishInfo.Group).All(&finishInfos)
+	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("Group", finishInfo.Group).All(&finishInfos)
 	return
 }
 

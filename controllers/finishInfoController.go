@@ -47,20 +47,14 @@ func (this *FinishInfoController) Post() {
 func (this *FinishInfoController) Get() {
 	var cName = this.GetString("factory", "")
 	var group = this.GetString("group", "")
-	var startTime = this.GetString("start_time", "")
-	var finishTime = this.GetString("finish_time", "")
 	beego.Debug("cName=", cName)
-	beego.Debug("startTime=", startTime)
-	beego.Debug("finishTime=", finishTime)
-	if cName == "" || startTime == "" || finishTime == "" {
+	if cName == "" {
 		this.Ctx.WriteString("parmas is empty")
 		beego.Debug("parmas is empty")
 		return
 	}
 	var finishInfo models.FinishInfo
 	finishInfo.Cname = cName
-	finishInfo.StartTime = startTime
-	finishInfo.FinishTime = finishTime
 	finishInfo.Group = group
 	//根据厂名和时间查询
 	finishInfos, err := models.ReadFinishInfo(finishInfo)

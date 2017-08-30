@@ -52,7 +52,7 @@ func (this *OrderController) Get() {
 		beego.Debug("parmas is empty")
 		return
 	}
-	var group = this.GetString("group", "")
+	var group = this.GetString("group", "一号线")
 	var order models.Order
 	order.Cname = cName
 	order.Group = group
