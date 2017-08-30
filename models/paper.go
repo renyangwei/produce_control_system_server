@@ -311,7 +311,16 @@ func InsertSearchRequest(searchRequest SearchRequest) (err error) {
 func ReadSearchRequest(searchRequest SearchRequest) (searchRequests []SearchRequest, err error) {
 	beego.Debug("ReadSearchRequest", searchRequest)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("SearchRequest").Filter("Cname", searchRequest.Cname).Filter("Group", searchRequest.Group).Filter("IsSearched", searchRequest.IsSearched).All(&searchRequests)
+	_, err = o.QueryTable("SearchRequest").Filter("Cname", searchRequest.Cname).Filter("IsSearched", searchRequest.IsSearched).All(&searchRequests)
 	return
+}
 
+/*
+更新搜索请求
+*/
+func UpdateSearchRequest(searchRequest SearchRequest) error {
+	beego.Debug("UpdateSearchRequest", searchRequest)
+	o := orm.NewOrm()
+	_, err := o.Update(&searchRequest, "IsSearched")
+	return err
 }
