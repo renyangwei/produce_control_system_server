@@ -59,7 +59,7 @@ type Order struct {
 type SearchRequest struct {
 	Id         int64  `orm:"pk;auto"`     //Id
 	Cname      string `json:"Cname"`      //公司名
-	Data       string `json:"Data"`       //搜索内容
+	Data       string `orm:"type(text)"`  //搜索内容
 	StartTime  string `json:"StartTime"`  //开始时间
 	FinishTime string `json:"FinishTime"` //完成时间
 	Group      string `json:"Group"`      //产线
@@ -73,7 +73,7 @@ type SearchRequest struct {
 type SearchResult struct {
 	Id         int64  `orm:"pk;auto"`     //Id
 	Cname      string `json:"Cname"`      //公司名
-	Data       string `json:"Data"`       //数据
+	Data       string `orm:"type(text)"`  //数据
 	StartTime  string `json:"StartTime"`  //开始时间
 	FinishTime string `json:"FinishTime"` //完成时间
 	Group      string `json:"Group"`      //产线
@@ -308,19 +308,49 @@ func InsertSearchRequest(searchRequest SearchRequest) (err error) {
 /*
 读取搜索请求
 */
-func ReadSearchRequest(searchRequest SearchRequest) (searchRequests []SearchRequest, err error) {
+func ReadSearchRequest(searchRequest SearchRequest) (searchRequests SearchRequest, err error) {
 	beego.Debug("ReadSearchRequest", searchRequest)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("SearchRequest").Filter("Cname", searchRequest.Cname).Filter("IsSearched", searchRequest.IsSearched).All(&searchRequests)
+	err = o.QueryTable("SearchRequest").Filter("Cname", searchRequest.Cname).Filter("IsSearched", searchRequest.IsSearched).One(&searchRequests)
 	return
 }
 
 /*
 更新搜索请求
 */
-func UpdateSearchRequest(searchRequest SearchRequest) error {
+func UpdateSearchRequest(searchRequest SearchRequest) (err error) {
 	beego.Debug("UpdateSearchRequest", searchRequest)
 	o := orm.NewOrm()
-	_, err := o.Update(&searchRequest, "IsSearched")
+	_, err = o.Update(&searchRequest, "IsSearched")
 	return err
+}
+
+/*
+保存搜索结果
+*/
+func InsertSearchResult(searchResults []SearchResult) (err error) {
+	beego.Debug("InsertSearchResult", searchResults)
+	o := orm.NewOrm()
+	_, err = o.InsertMulti(1, searchResults)
+	return
+}
+
+/*
+读取搜索结果
+*/
+func ReadSearchResult(searchResult SearchResult) (searchResults []SearchResult, err error) {
+	beego.Debug("ReadSearchResult", searchResult)
+	o := orm.NewOrm()
+	_, err = o.QueryTable("SearchResult").Filter("Cname", searchResult.Cname).Filter("Group", searchResult.Group).Filter("Type", searchResult.Type).All(&searchResults)
+	return
+}
+
+/*
+删除搜索结果
+*/
+func DeleteSearchResult(searchResult SearchResult) (err error) {
+	beego.Debug("DeleteSearchResult", searchResult)
+	o := orm.NewOrm()
+	_, err = o.QueryTable("SearchResult").Filter("Cname", searchResult.Cname).Filter("Group", searchResult.Group).Filter("Type", searchResult.Type).Delete()
+	return
 }

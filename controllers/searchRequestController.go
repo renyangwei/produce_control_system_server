@@ -4,8 +4,6 @@ package controllers
 import (
 	"PaperManagementServer/models"
 	"encoding/json"
-	"strings"
-	"time"
 
 	"github.com/astaxie/beego"
 )
@@ -36,16 +34,23 @@ func (this *SearchRequestController) Get() {
 	var searchRequest models.SearchRequest
 	searchRequest.Cname = cname
 	searchRequest.IsSearched = false
-	searchRequests, err := models.ReadSearchRequest()
+	searchRequests, err := models.ReadSearchRequest(searchRequest)
 	if err != nil {
 		beego.Error("SearchRequestController, read search request err:", err)
 		this.Ctx.WriteString(err.Error())
 		return
 	}
 	beego.Debug("SearchRequestController, search requests:", searchRequests)
-	//发送第一个
-	this.Data["json"] = &searchRequests[0]
+	this.Data["json"] = &searchRequests
 	this.ServeJSON()
+	//修改是否搜索过
+	searchRequests.IsSearched = true
+	err = models.UpdateSearchRequest(searchRequests)
+	if err != nil {
+		beego.Error("SearchRequestController, update search request err:", err)
+		this.Ctx.WriteString(err.Error())
+		return
+	}
 }
 
 /*
@@ -61,6 +66,17 @@ func (this *SearchRequestController) Post() {
 		this.Ctx.WriteString(err.Error())
 		return
 	}
+	if searchRequest.Cname == "" || searchRequest.Data == "" || searchRequest.Group == "" || searchRequest.Type == "" {
+		beego.Debug("SearchRequestController, params is empty")
+		this.Ctx.WriteString("params is empty")
+		return
+	}
 	//保存参数
-
+	err = models.InsertSearchRequest(searchRequest)
+	if err != nil {
+		beego.Error("SearchRequestController, insert search request err:", err)
+		this.Ctx.WriteString(err.Error())
+		return
+	}
+	this.Ctx.WriteString("post success")
 }

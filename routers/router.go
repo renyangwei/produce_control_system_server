@@ -35,6 +35,9 @@ func init() {
 	//搜索接口,
 	// /search?type=order&cname=xxx&data=abc&group=一号线
 	beego.Router("/search", &controllers.SearchController{}, "get:Get;post:Post")
+	//搜索参数
 	beego.Router("/search/request", &controllers.SearchRequestController{}, "get:Get;post:Post")
+	//搜索结果
+	beego.Router("/search/result", &controllers.SearchResultController{}, "get:Get;post:Post")
 
 }
