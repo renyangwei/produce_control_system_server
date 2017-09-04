@@ -78,5 +78,5 @@ func (this *SearchRequestController) Post() {
 		this.Ctx.WriteString(err.Error())
 		return
 	}
-	this.Ctx.WriteString("post success")
+	this.Ctx.WriteString("{\"response\":\"post succes\"}")
 }
