@@ -25,6 +25,7 @@ func (this *FinishInfoController) Post() {
 	}
 	var finishInfo models.FinishInfo
 	finishInfo.Cname = finishInfos[0].Cname
+	finishInfo.Group = finishInfos[0].Group
 	err = models.DeleteFinishInfo(finishInfo)
 	if err != nil {
 		this.Ctx.WriteString(err.Error())

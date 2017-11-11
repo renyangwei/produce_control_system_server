@@ -237,7 +237,7 @@ func ReadOrder(order Order) (orders []Order, err error) {
 func DeleteOrder(order Order) (err error) {
 	beego.Debug("DeleteOrder", order)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("Order").Filter("Cname", order.Cname).Delete()
+	_, err = o.QueryTable("Order").Filter("Cname", order.Cname).Filter("Group", order.Group).Delete()
 	return
 }
 
@@ -261,7 +261,7 @@ func ReadFinishInfo(finishInfo FinishInfo) (finishInfos []FinishInfo, err error)
 func DeleteFinishInfo(finishInfo FinishInfo) (err error) {
 	beego.Debug("DeleteFinishInfo", finishInfo)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Delete()
+	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("Group", finishInfo.Group).Delete()
 	return
 }
 

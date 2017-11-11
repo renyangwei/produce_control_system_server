@@ -26,6 +26,7 @@ func (this *OrderController) Post() {
 	//删除
 	var order models.Order
 	order.Cname = orders[0].Cname
+	order.Group = orders[0].Group
 	err = models.DeleteOrder(order)
 	if err != nil {
 		this.Ctx.WriteString(err.Error())
