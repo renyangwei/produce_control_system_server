@@ -4,6 +4,7 @@ package controllers
 import (
 	"PaperManagementServer/models"
 	"encoding/json"
+	"time"
 
 	"github.com/astaxie/beego"
 )
@@ -54,9 +55,14 @@ func (this *FinishInfoController) Get() {
 		beego.Debug("parmas is empty")
 		return
 	}
+	//获得今天的时间
+	today := time.Now().Format("2006-01-02")
+	tomorrow := time.Now().AddDate(0, 0, 1).Format("2006-01-02")
 	var finishInfo models.FinishInfo
 	finishInfo.Cname = cName
 	finishInfo.Group = group
+	finishInfo.StartTime = today
+	finishInfo.FinishTime = tomorrow
 	//根据厂名和时间查询
 	finishInfos, err := models.ReadFinishInfo(finishInfo)
 	if err != nil {

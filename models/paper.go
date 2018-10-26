@@ -253,7 +253,7 @@ func InsertFinishInfo(finishInfo FinishInfo) (err error) {
 func ReadFinishInfo(finishInfo FinishInfo) (finishInfos []FinishInfo, err error) {
 	beego.Debug("ReadFinishInfo", finishInfo)
 	o := orm.NewOrm()
-	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("Group", finishInfo.Group).All(&finishInfos)
+	_, err = o.QueryTable("FinishInfo").Filter("Cname", finishInfo.Cname).Filter("Group", finishInfo.Group).Filter("StartTime__gte", finishInfo.StartTime).Filter("FinishTime__lt", finishInfo.FinishTime).All(&finishInfos)
 	return
 }
 
