@@ -66,7 +66,7 @@ func (this *SearchRequestController) Post() {
 		this.Ctx.WriteString(err.Error())
 		return
 	}
-	if searchRequest.Cname == "" || searchRequest.Data == "" || searchRequest.Group == "" || searchRequest.Type == "" {
+	if searchRequest.Cname == "" || searchRequest.Group == "" || searchRequest.Type == "" {
 		beego.Debug("SearchRequestController, params is empty")
 		this.Ctx.WriteString("params is empty")
 		return
